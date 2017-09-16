@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>{{employee[0].departmentName}}</h1>
+  <div class="grid grid-pad">
+    <a *ngFor="let employ of employee" class="col-1-4">
+      <div class="module department">
+        <h4>{{employ.firstName}}</h4>
+      </div>
+    </a>
+  </div>
+
+</div>
+<div style="text-align: center">
+  <button (click)="goBack()" class="btn-lg ">Back</button>
+</div>
+
+

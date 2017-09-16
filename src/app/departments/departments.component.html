@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Departments</h1>
+  <div class="add">
+    <input type="text" placeholder="Name" id="name">
+    <input type="text" placeholder="Description" id="description">
+    <button type="button" class="btn-info" (click)="add()">Add Department</button>
+  </div>
+
+  <div class="grid grid-pad">
+
+    <a *ngFor="let department of departments" [routerLink]="['/detail', department.id]" class="col-1-4">
+      <button (click)="deleteDepartment(department)" style="float: right">delete</button>
+      <div class="module department">
+        <h4>{{department.name}}</h4>
+      </div>
+    </a>
+
+
+  </div>
+
+</div>
+
